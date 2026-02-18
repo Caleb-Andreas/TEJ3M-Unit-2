@@ -9,6 +9,7 @@ import board
 import digitalio
 import time
 
+# Variables.
 blink_time = 1
 led = digitalio.DigitalInOut(board.LED)
 led.direction = digitalio.Direction.OUTPUT
