@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Created by: Caleb Andreas
-Created on: February 2026
+Created on: February 18, 2026
 This program blinks but every time the light will increase in the amount of time that it is on.
 """
 
