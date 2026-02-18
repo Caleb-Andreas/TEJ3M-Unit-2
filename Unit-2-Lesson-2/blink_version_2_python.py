@@ -9,10 +9,12 @@ import board
 import digitalio
 import time
 
-# Variables.
-blink_time = 1
+# Setup.
 led = digitalio.DigitalInOut(board.LED)
 led.direction = digitalio.Direction.OUTPUT
+
+# Variables.
+blink_time = 1
 
 while True:
     led.value = True
