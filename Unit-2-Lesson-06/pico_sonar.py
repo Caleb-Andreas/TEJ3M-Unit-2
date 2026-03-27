@@ -14,7 +14,10 @@ sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.GP5, echo_pin=board.GP4)
 
 while True:
     try:
+        # Find distance and print.
         print((sonar.distance,))
     except RuntimeError:
+        # Catch.
         print("Retrying!")
+    # Wait.
     time.sleep(0.1)
