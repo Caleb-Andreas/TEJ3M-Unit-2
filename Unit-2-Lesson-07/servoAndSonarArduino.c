@@ -1,6 +1,6 @@
 // Created by Caleb Andreas
 // Created on March 31, 2026
-// This program measures distance using the sonar with the Arduino.
+// This program measures distance then rotates a servo if the distance is under 50 cm with the with the Arduino.
 
 #include <Servo.h>
 
@@ -20,7 +20,7 @@ void setup() {
   pinMode(TRIGPIN, OUTPUT);
   pinMode(ECHOPIN, INPUT);
   Serial.begin(9600);
-  // Set output for servo to pin 2 and make it go to 0 degrees.
+  // Set output for servo to pin 2 and make it go to 0°.
   servoNumber1.attach(SERVOPIN);
   servoNumber1.write(0);
 }
@@ -41,10 +41,10 @@ void loop() {
   // If distance is greater or equal to 50 cm.
   if (distance >= 50) {
     if (angle == 180) {
-      // If angle reaches 180 degrees start going other way (subtract).
+      // If angle reaches 180° start going other way (subtract).
       add = -1;
     } else if (angle == 0) {
-      // If angle reaches 0 degrees start going other way (add).
+      // If angle reaches 0° start going other way (add).
       add = 1;
     }
     // Change angle to go to.
