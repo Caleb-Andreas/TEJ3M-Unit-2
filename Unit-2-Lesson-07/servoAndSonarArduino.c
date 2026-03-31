@@ -1,6 +1,6 @@
 // Created by Caleb Andreas
 // Created on March 31, 2026
-// This program measures distance then rotates a servo if the distance is under 50 cm with the with the Arduino.
+// This program measures distance then rotates a servo if the distance is over 50 cm with the with the Arduino.
 
 #include <Servo.h>
 
