@@ -30,21 +30,21 @@ while True:
         
         # If distance is greater or equal to 50 cm.
         if distance >= 50:
-            if angle == 180:
+            if angle >= 180:
                 # If angle reaches 180° start going other way (subtract).
                 add = -1
-            elif angle == 0:
+            elif angle <= 0:
                 # If angle reaches 0° start going other way (add).
                 add = 1
             
-        # Change angle to go to.
-        angle = angle + add;
-        
-        # Start moving.
-        my_servo.angle = angle
-
+            # Change angle to go to.
+            angle = angle + add
+            
+            # Start moving.
+            my_servo.angle = angle
+            
         # Wait.
-        time.sleep(0.1)
+        time.sleep(0.15)
 
     except RuntimeError:
         # If the sonar misses an echo.
