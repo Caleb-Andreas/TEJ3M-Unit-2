@@ -8,7 +8,7 @@
 Servo servoNumber1;
 
 // Variables.
-const int ANGLE_POTENTIOMETER_RATIO = 1023 /180;
+const int ANGLE_POTENTIOMETER_RATIO = 1023 / 180; // Maximum 8-bit number / maximum angle of rotation.
 const int PIN_9 = 9;
 const int POTENTIOMETER_PIN = A0;
 int angle = 0;
